@@ -123,3 +123,7 @@ steps:
 
 - publish: 'Artifacts'
   condition: always()
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: drop
